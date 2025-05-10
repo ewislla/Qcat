@@ -43,7 +43,7 @@ const About: React.FC = () => {
           <div className="w-full md:w-1/3 flex justify-center">
             <div className="cat-face relative">
               <motion.img
-                src="/src/assets/quantum-cat-face.png"
+                src="/assets/quantum-cat-face.png"
                 alt="QuantumCat"
                 className="w-48 md:w-64"
                 whileHover={{ scale: 1.05 }}

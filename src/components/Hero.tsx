@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
 
       {/* Circular QuantumCat image */}
       <motion.img
-        src="/src/assets/quantum-cat-face.png"
+        src="/assets/quantum-cat-face.png"
         alt="QuantumCat"
         className="relative z-10 w-48 md:w-64 mb-8 animate-float rounded-full border-4 border-cyan-400 bg-white shadow-lg shadow-cyan-500/30"
         animate={{ scale: inView ? 1 : 0.8, opacity: inView ? 1 : 0 }}
