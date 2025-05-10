@@ -17,13 +17,8 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   const navItems = [
     { name: 'Home', to: 'hero' },
@@ -32,7 +27,7 @@ const Navbar: React.FC = () => {
     { name: 'Lore', to: 'lore' },
     { name: 'Join the Clowder', to: 'join' },
     { name: 'PawPool', to: 'pawpool' },
-    { name: 'Contact', to: 'contact' }
+    { name: 'Contact', to: 'contact' },
   ];
 
   return (
@@ -43,67 +38,66 @@ const Navbar: React.FC = () => {
           : 'bg-transparent py-4'
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center">
-          {/* Logo and $QCAT tag */}
-          <Link
-            to="hero"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-            className="flex items-center gap-3 cursor-pointer group"
-            onClick={closeMenu}
-          >
-            <img
-              src="/assets/quantum-cat-face.png"
-              alt="QuantumCat Logo"
-              className="h-12 w-12 rounded-full border-2 border-cyan-400 bg-white shadow shadow-cyan-500/40 animate-float group-hover:scale-110 transition-transform"
-            />
-          </Link>
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        {/* Logo */}
+        <Link
+          to="hero"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="flex items-center gap-3 cursor-pointer group"
+          onClick={closeMenu}
+        >
+          <img
+            src="/assets/quantum-cat-face.png"
+            alt="QuantumCat Logo"
+            className="h-12 w-12 rounded-full border-2 border-cyan-400 bg-white shadow shadow-cyan-500/40 animate-float group-hover:scale-110 transition-transform"
+          />
+          <span className="hidden md:inline-block text-neon-blue font-pixel text-base group-hover:text-golden transition-colors">
+            $QCAT
+          </span>
+        </Link>
 
-          {/* Mobile toggle */}
-          <button
-            onClick={toggleMenu}
-            className="md:hidden relative z-50 w-10 h-10 flex items-center justify-center rounded-lg border-2 border-neon-blue text-neon-blue hover:text-golden hover:border-golden transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-
-          {/* Desktop menu */}
-          <div className="hidden md:flex items-center space-x-6">
-            {navItems.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                className="nav-item cursor-pointer text-sm font-pixel tracking-wider hover:scale-105 transition-transform"
-                activeClass="active"
-              >
-                {item.name}
-              </Link>
-            ))}
-            <a
-              href="#"
-              className="cosmic-button text-sm"
-              target="_blank"
-              rel="noopener noreferrer"
+        {/* Desktop menu */}
+        <div className="hidden md:flex items-center space-x-5">
+          {navItems.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="cursor-pointer text-sm font-pixel tracking-wide text-neon-blue hover:text-golden transition-colors"
+              activeClass="active"
             >
-              Buy Now
-            </a>
-          </div>
+              {item.name}
+            </Link>
+          ))}
+          <a
+            href="#"
+            className="ml-4 cosmic-button text-sm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Buy Now
+          </a>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={toggleMenu}
+          className="md:hidden relative z-50 w-10 h-10 flex items-center justify-center rounded-lg border-2 border-neon-blue text-neon-blue hover:text-golden hover:border-golden transition-colors"
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
 
-      {/* Mobile menu full-screen scrollable overlay */}
+      {/* Mobile overlay menu */}
       {isMenuOpen && (
-        <div
-          className="md:hidden fixed top-0 left-0 w-full h-screen bg-space-black/95 backdrop-blur-lg z-40 overflow-y-auto transition-all"
-        >
+        <div className="md:hidden fixed top-0 left-0 w-full h-screen bg-space-black/95 backdrop-blur-lg z-40 overflow-y-auto transition-all">
           <div className="flex flex-col items-center justify-center py-20 space-y-6 px-6">
             {navItems.map((item) => (
               <Link
@@ -113,8 +107,7 @@ const Navbar: React.FC = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="nav-item cursor-pointer text-xl font-pixel text-neon-blue hover:text-golden transition-colors"
-                activeClass="active"
+                className="text-xl font-pixel text-neon-blue hover:text-golden transition-colors"
                 onClick={closeMenu}
               >
                 {item.name}
