@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-blue: #00FFFF;
+  --cosmic-purple: #9D00FF;
+  --golden: #FFD700;
+  --space-black: #050A30;
+}
+
+body {
+  margin: 0;
+  background-color: var(--space-black);
+  color: white;
+  font-family: 'VT323', monospace;
+  overflow-x: hidden;
+}
+
+.text-shadow-neon-blue {
+  text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+}
+
+.text-shadow-neon-purple {
+  text-shadow: 0 0 5px var(--cosmic-purple), 0 0 10px var(--cosmic-purple);
+}
+
+.text-shadow-golden {
+  text-shadow: 0 0 5px var(--golden), 0 0 10px var(--golden);
+}
+
+.pixel-border {
+  position: relative;
+  padding: 1.5rem;
+  border: 4px solid var(--neon-blue);
+  box-shadow: 0 0 5px var(--neon-blue);
+}
+
+.pixel-border::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: transparent;
+  border: 2px solid var(--cosmic-purple);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.quantum-card {
+  background: rgba(5, 10, 48, 0.8);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--neon-blue);
+  box-shadow: 0 0 10px var(--neon-blue);
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.quantum-card:hover {
+  box-shadow: 0 0 20px var(--neon-blue);
+  transform: translateY(-5px);
+}
+
+.cosmic-button {
+  background: linear-gradient(45deg, var(--neon-blue), var(--cosmic-purple));
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  outline: 2px solid var(--neon-blue);
+  outline-offset: 2px;
+}
+
+.cosmic-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+}
+
+.cosmic-button:active {
+  transform: translateY(1px);
+}
+
+.cosmic-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.cosmic-button:hover::before {
+  left: 100%;
+}
+
+.tokenomics-value {
+  font-size: 2.5rem;
+  font-family: 'VT323', monospace;
+  color: var(--golden);
+  text-shadow: 0 0 10px var(--golden);
+  transition: all 0.3s ease;
+}
+
+.tokenomics-value:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 15px var(--golden);
+}
+
+.nav-item {
+  position: relative;
+  color: var(--neon-blue);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--neon-blue);
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+  width: 100%;
+}
+
+.nav-item:hover {
+  color: var(--neon-blue);
+  text-shadow: 0 0 5px var(--neon-blue);
+}
+
+/* Pixel-style scrollbar */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--space-black);
+  border-left: 2px solid var(--neon-blue);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neon-blue);
+  border: 2px solid var(--cosmic-purple);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--golden);
+}
+
+/* Make the cat face whiskers move on hover */
+.cat-face:hover .whiskers {
+  animation: float 1s ease-in-out infinite;
+}
+
+/* Make the cat eyes sparkle on hover */
+.cat-face:hover .eyes {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .nav-item {
+    font-size: 0.7rem;
+  }
+}
