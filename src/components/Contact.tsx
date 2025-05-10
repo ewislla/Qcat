@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Twitter, MessageCircle, Github } from 'lucide-react';
+import { Twitter, MessageCircle } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [ref, inView] = useInView({
@@ -23,57 +23,30 @@ const Contact: React.FC = () => {
           transition={{ duration: 0.5 }}
         >
           <img 
-            src="/src/assets/quantum-cat-face.png" 
+            src="/assets/quantum-cat-face.png" 
             alt="QuantumCat" 
-            className="w-16 h-16 mb-6 animate-float" 
+            className="w-16 h-16 mb-6 animate-float rounded-full border-2 border-cyan-400 bg-white shadow" 
           />
           
           <div className="flex justify-center space-x-8 mb-8">
             <a 
-              href="#" 
+              href="https://x.com/Qcatsolana?t=rKXMpmvkGys6fdtZ4IBWHA&s=09" 
               className="text-neon-blue hover:text-golden transition-colors"
               aria-label="Twitter"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Twitter size={28} className="hover:animate-pulse" />
             </a>
+
             <a 
-              href="#" 
-              className="text-neon-blue hover:text-golden transition-colors"
-              aria-label="Discord"
-            >
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                width="28" 
-                height="28" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                className="hover:animate-pulse"
-              >
-                <circle cx="9" cy="12" r="1"></circle>
-                <circle cx="15" cy="12" r="1"></circle>
-                <path d="M7.5 7.5c3.5-1 5.5-1 9 0"></path>
-                <path d="M7 16.5c3.5 1 6.5 1 10 0"></path>
-                <path d="M15.5 17c0 1 1.5 3 2 3 1.5 0 2.833-1.667 3.5-3 .667-1.667.5-5.833-1.5-11.5-1.457-1.015-3-1.34-4.5-1.5l-1 2.5"></path>
-                <path d="M8.5 17c0 1-1.356 3-1.832 3-1.429 0-2.698-1.667-3.333-3-.635-1.667-.48-5.833 1.428-11.5C6.151 4.485 7.545 4.16 9 4l1 2.5"></path>
-              </svg>
-            </a>
-            <a 
-              href="#" 
+              href="https://t.me/+96SFgn6uIqI4YTNk" 
               className="text-neon-blue hover:text-golden transition-colors"
               aria-label="Telegram"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <MessageCircle size={28} className="hover:animate-pulse" />
-            </a>
-            <a 
-              href="#" 
-              className="text-neon-blue hover:text-golden transition-colors"
-              aria-label="Github"
-            >
-              <Github size={28} className="hover:animate-pulse" />
             </a>
           </div>
           
