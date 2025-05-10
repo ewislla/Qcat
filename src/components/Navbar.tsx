@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
             onClick={closeMenu}
           >
             <img
-              src="./assets/quantum-cat-face.png"
+              src="../../assets/quantum-cat-face.png"
               alt="QuantumCat Logo"
               className="h-12 w-12 rounded-full border-2 border-cyan-400 bg-white shadow shadow-cyan-500/40 animate-float group-hover:scale-110 transition-transform"
             />
