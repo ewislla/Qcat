@@ -69,7 +69,7 @@ const JoinClowder: React.FC = () => {
             </a>
 
             <a 
-              href="https://t.me/+96SFgn6uIqI4YTNk" 
+              href="https://t.me/quantumcatofficial" 
               className="text-neon-blue hover:text-golden transition-colors"
               aria-label="Telegram"
               target="_blank"
@@ -85,8 +85,10 @@ const JoinClowder: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
+            <a href= "https://t.me/quantumcatofficial" >
             <span className="relative z-10">Join the Clowder</span>
             <span className="absolute inset-0 bg-gradient-to-r from-cosmic-purple to-neon-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            </a>
           </motion.button>
         </motion.div>
       </div>

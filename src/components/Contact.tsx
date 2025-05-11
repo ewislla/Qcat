@@ -40,7 +40,7 @@ const Contact: React.FC = () => {
             </a>
 
             <a 
-              href="https://t.me/+96SFgn6uIqI4YTNk" 
+              href="https://t.me/quantumcatofficial" 
               className="text-neon-blue hover:text-golden transition-colors"
               aria-label="Telegram"
               target="_blank"

@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
           <span>Follow X</span>
         </a>
         <a
-          href="https://t.me/+96SFgn6uIqI4YTNk" // Replace with actual
+          href="https://t.me/quantumcatofficial" // Replace with actual
           className="flex items-center gap-2 px-6 py-3 bg-[#0088cc]/20 hover:bg-[#0088cc]/30 rounded-lg border-2 border-[#0088cc] text-white font-pixel text-sm transition-all hover:scale-105"
           target="_blank"
           rel="noopener noreferrer"
