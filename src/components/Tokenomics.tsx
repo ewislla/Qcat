@@ -36,7 +36,7 @@ const Tokenomics: React.FC = () => {
   const tokenomicsData = [
     { title: "Token Name", value: "QuantumCat" },
     { title: "Ticker", value: "$QCAT" },
-    { title: "Total Supply", value: "1 Quadrillion" },
+    { title: "Total Supply", value: "1 Billion" },
     { title: "Paw Pool Reserve", value: "10%" },
   ];
 
