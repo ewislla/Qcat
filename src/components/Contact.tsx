@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
           
           <div className="flex justify-center space-x-8 mb-8">
             <a 
-              href="https://x.com/Qcatsolana?t=rKXMpmvkGys6fdtZ4IBWHA&s=09" 
+              href="https://x.com/qcatsolana_" 
               className="text-neon-blue hover:text-golden transition-colors"
               aria-label="Twitter"
               target="_blank"

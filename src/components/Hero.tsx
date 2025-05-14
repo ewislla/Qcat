@@ -107,7 +107,8 @@ const Hero: React.FC = () => {
         animate={inView ? "visible" : "hidden"}
       >
         <a
-          href="https://x.com/Qcatsolana?t=rKXMpmvkGys6fdtZ4IBWHA&s=09" // Replace with actual
+          href="https://x.com/qcatsolana_"
+          //Replace with actual
           className="flex items-center gap-2 px-6 py-3 bg-[#1DA1F2]/20 hover:bg-[#1DA1F2]/30 rounded-lg border-2 border-[#1DA1F2] text-white font-pixel text-sm transition-all hover:scale-105"
           target="_blank"
           rel="noopener noreferrer"

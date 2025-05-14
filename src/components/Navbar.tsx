@@ -25,9 +25,9 @@ const Navbar: React.FC = () => {
     { name: 'About', to: 'about' },
     { name: 'Tokenomics', to: 'tokenomics' },
     { name: 'Lore', to: 'lore' },
-    { name: 'Join the Clowder', to: 'join' },
     { name: 'PawPool', to: 'pawpool' },
-    { name: 'Contact', to: 'contact' },
+    { name: 'Roadmap', to: 'roadmap' },
+    { name: 'Join the Clowder', to: 'join' },
   ];
 
   return (
@@ -81,8 +81,8 @@ const Navbar: React.FC = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="text-xl font-pixel text-neon-blue hover:text-golden transition-colors"
                 onClick={closeMenu}
+                className="text-xl font-pixel text-neon-blue hover:text-golden transition-all text-center whitespace-nowrap px-4"
               >
                 {item.name}
               </Link>

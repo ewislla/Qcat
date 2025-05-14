@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Roadmap from './components/Roadmap';
 import Tokenomics from './components/Tokenomics';
 import Lore from './components/Lore';
 import JoinClowder from './components/JoinClowder';
@@ -18,7 +19,9 @@ function App() {
         <Hero />
         <About />
         <Tokenomics />
+  
         <Lore />
+        <Roadmap />
         <JoinClowder />
         <PawPoolReserve />
         <Contact />
